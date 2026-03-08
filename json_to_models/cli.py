@@ -410,7 +410,8 @@ class Cli:
             default=[],
             nargs="+", type=str,
             help="List of words to remove from the keyword blacklist.\n"
-                 "Prevents appending '_' to these specific field names (e.g., id, type, hash, format).\n\n"
+                 "Prevents appending '_' to these field names.\n"
+                 "WARNING: reserved keywords may cause syntax errors if you allow them, so be careful with this option."
         )
 
         return parser
